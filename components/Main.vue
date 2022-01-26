@@ -44,7 +44,6 @@
               font-medium
               text-xs
               leading-tight
-              uppercase
               rounded-2xl
               shadow-md
               hover:shadow-lg
@@ -196,85 +195,20 @@
     </div>
 
     <!-- move to another component -->
-    <div
-      class="flex space-x-4 items-start mt-10 overflow-x-scroll"
-      style="max-width: 100%"
-    >
-      <div class="w-1/4" v-for="(task, i) in tasks" :key="i">
-        <div
-          class="flex justify-between items-center bg-white px-4 py-1 rounded"
-        >
-          <p class="text-sm">{{ task.heading }}</p>
-          <div class="flex justify-end space-x-2 items-center">
-            <div>
-              <i class="ri-more-line"></i>
-            </div>
-            <div>
-              <i class="ri-add-line"></i>
-            </div>
-          </div>
-        </div>
 
-        <div class="mt-4 flex flex-col overflow-y-scroll __height" style="">
-          <draggable
-            class="cursor-move"
-            :list="task.list"
-            @start="drag = true"
-            :group="{ name: 'myGroup', pull: true, put: true }"
-            @end="drag = false"
-            :move="detectMove"
-          >
-            <div
-              class="rounded mt-4 p-4 flex flex-col bg-white"
-              ref="drag"
-              v-for="(list, a) in task.list"
-              :key="a"
-            >
-              <div class="tags rounded py-1 px-3 bg-yellow-100 w-2/3">
-                <p class="text-sm">{{ list.tag }}</p>
-              </div>
-              <div class="mt-4 text-sm">{{ list.title }}</div>
-              <div class="mt-4 text-sm">{{ list.description }}</div>
-            </div>
-          </draggable>
-        </div>
-      </div>
+    <Board />
+    <div class="flex justify-end">
+      <i class="ri-question-line" style="color: #6c5ce7"></i>
     </div>
   </div>
 </template>
 
 <script>
-import draggable from "vuedraggable";
 export default {
   name: "Main",
-  components: {
-    draggable,
-  },
-  display: "Handle",
-  data() {
-    return {
-      tasks: [],
-    };
-  },
-  methods: {
-    detectMove: function (evt) {
-      console.log(evt.dragged.draggable);
-      if (evt.dragged.draggable === true) {
-        // this.$refs.drag.style.background = "red";
-        console.log(this.$refs.drag);
-      }
-    },
-  },
-  async beforeMount() {
-    const res = await this.$axios.$get("/tasks");
-    this.tasks = res;
-  },
 };
 </script>
 <style>
-::-webkit-scrollbar {
-  display: none;
-}
 input::placeholder {
   font-family: "Poppins";
 }
@@ -284,10 +218,5 @@ input:focus {
 }
 .__main {
   background: #74859c2e;
-}
-.__height {
-  height: calc(100vh - 18rem);
-
-  position: relative !important;
 }
 </style>

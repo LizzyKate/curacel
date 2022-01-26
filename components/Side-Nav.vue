@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col h-screen px-3 py-8 bg-white text-gray-800">
+  <div class="flex flex-col h-screen px-5 py-8 bg-white text-gray-800">
     <div class="space-y-3">
       <div class="flex space-x-2 justify-center items-center">
         <div>
@@ -251,11 +251,11 @@
       <img
         src="https://source.unsplash.com/100x100/?portrait"
         alt=""
-        class="w-14 h-14 rounded-full"
+        class="w-10 h-10 rounded-full"
       />
       <div>
         <h2
-          class="text-base font-semibold"
+          class="text-sm font-semibold"
           style="color: #001a41; font-family:'Poppins"
         >
           Leroy Jenkins
