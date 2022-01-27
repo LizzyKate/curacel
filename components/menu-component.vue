@@ -125,7 +125,7 @@
 
 <script>
 export default {
-  name: "menuComponent",
+  name: "MenuComponent",
   data() {
     return {
       activity: [
