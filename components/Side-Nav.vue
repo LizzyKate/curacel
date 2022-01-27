@@ -133,7 +133,7 @@
                 class="accordion-body mt-2 p-2 rounded-2xl"
                 style="background: rgba(12, 86, 194, 0.1)"
               >
-                <ul class="space-y-1 text-sm">
+                <ul class="accordion-list space-y-1 text-sm">
                   <li class="__list p-1">
                     <a
                       href="#"
@@ -268,7 +268,7 @@
 <script>
 import "tw-elements";
 export default {
-  name: "Side-Nav",
+  name: "side-nav",
 };
 </script>
 

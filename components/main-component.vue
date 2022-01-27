@@ -204,8 +204,12 @@
 </template>
 
 <script>
+import Board from "./board";
 export default {
-  name: "Main",
+  name: "Main-component",
+  components: {
+    Board,
+  },
 };
 </script>
 <style>

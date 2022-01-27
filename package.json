@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.13.6",
+    "axios-mock-server": "^0.19.1",
     "core-js": "^3.19.3",
     "nuxt": "^2.15.8",
     "tw-elements": "^1.0.0-alpha9",

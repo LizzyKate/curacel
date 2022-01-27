@@ -4,10 +4,10 @@
       <Side-Nav />
     </div>
     <div class="w-3/5 bg-white pt-8 max-h-screen" style="">
-      <Main />
+      <MainComponent />
     </div>
     <div class="w-1/5">
-      <Menu />
+      <MenuComponent />
     </div>
   </div>
 </template>

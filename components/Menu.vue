@@ -61,7 +61,7 @@
       </div>
     </div>
     <div class="w-full mt-6" style="border-top: 1px solid #828282a1"></div>
-    <div class="flex flex-col mt-6" style="padding-left: 10px">
+    <div class="flex flex-col mt-6 __recent" style="padding-left: 10px">
       <h1
         class="text-lg font-semibold"
         style="color: #001a41; font-family:'Poppins"
@@ -125,7 +125,7 @@
 
 <script>
 export default {
-  name: "Menu",
+  name: "menuComponent",
   data() {
     return {
       activity: [
